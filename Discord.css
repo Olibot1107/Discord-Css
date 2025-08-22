@@ -12,10 +12,36 @@ div[data-list-item-id="guildsnav___home"] {
 }
 
 [aria-label="Help"] {
-  display: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  display: hidden
 }
+
+[aria-label="Help"] {
+  display: inline-flex; /* ensure the element can contain text */
+  align-items: center;
+  justify-content: center;
+  width: 132px; /* adjust to the desired button width */
+  height: 40px; /* adjust to match button height */
+  overflow: hidden; /* hide overflow */
+  text-align: center;
+}
+
+/* Target only the SVG inside the element with aria-label="Help" */
+[aria-label="Help"] > svg[aria-hidden="true"][width="24"][height="24"][viewBox="0 0 24 24"] {
+  display: none !important;
+}
+
+
+[aria-label="Help"]::after {
+  content: "Oli-css (Verson 2.1)";
+  display: inline-block;
+  white-space: nowrap; /* prevent line breaks */
+  overflow: hidden; 
+  text-overflow: ellipsis; /* add "..." if too long */
+  max-width: 100%;
+  font-size: 14px; /* adjust size to fit */
+}
+
+
 
 .newMessagesBar__0f481 {
   top: 5px;
