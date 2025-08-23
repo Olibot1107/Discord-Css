@@ -64,7 +64,6 @@ div[data-list-item-id="guildsnav___home"] {
   height: unset;
   line-height: 18px;
   background-color: hsl(var(--accent-hsl--material-you));
-  color: red;
   box-shadow: var(--shadow-2dp);
   pointer-events: all;
 }
